@@ -2,7 +2,7 @@ package Questions;
 //https://practice.geeksforgeeks.org/problems/merge-two-sorted-arrays-1587115620/1
 //Merging Sorted Arrays without extra space
 import java.util.Arrays;
-public class MergeSorted {
+public class MergeSortedwithoutExtra {
 
 	public static void main(String[] args) {
 		int arr1[] = {1,3,5,7,10,11}; 
