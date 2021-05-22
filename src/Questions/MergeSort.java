@@ -1,6 +1,6 @@
 package Questions;
 import java.util.Scanner;
-public class MergeSort{
+public class MergeSortAlgorithm{
 	public static void sort(int arr[],int temp[],int low,int mid,int high)
 	{
 		int i=low,j=mid+1,k=low;
