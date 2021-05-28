@@ -6,7 +6,7 @@ public class QuickSort {
 		int pivot=arr[low];    
 		int i=low,j=high;		
 		while(i<j) {	
-			//keep on increasing value of i until you encounter an element larger than pivot and keep on decreasing value of j until you encounter an element smaller
+			//keep on increasing value of i until you encounter an element larger than pivot and keep on decreasing value of j until you encounter an element smaller than
 			//pivot and then after it swap elements at i and j positions and also at last when i>j then swap elements at j and pivot position. 
 			while(arr[i]<=pivot)	
 				i++;
