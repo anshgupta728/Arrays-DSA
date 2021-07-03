@@ -26,14 +26,15 @@ public class SubArraywithZeroSum {
 			int curr=0;
 			for(int j=i;j<n;j++) {
 				curr+=arr[j];
-				//System.out.print(curr+" ");
 				if(curr==0) {
 					found=true;
+					break;
 				}
 			}
-			//System.out.println();
+			if(found)
+				break;
 		}
-		
+
 		if(found) {
 			System.out.println("Subarray with sum zero exsist");
 		}
