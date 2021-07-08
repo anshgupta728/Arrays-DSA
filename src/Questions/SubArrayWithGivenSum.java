@@ -2,41 +2,35 @@ package Questions;
 import java.util.*;
 public class SubArrayWithGivenSum {
 	// 2 3 5 2 5 10 2 3
-	static void check2(int arr[],int s) {
+	static boolean check2(int arr[],int s) {
 		Set<Integer> set=new HashSet<Integer>();
 		int sum=0;
-		boolean found=false;
 		for(int ele:arr) {
-			set.add(sum);
 			sum+=ele;
-			if(set.contains(sum-s)) {
-				found=true;
-				break;
+			if(sum-s==0) {
+				return true;
 			}
+			if(set.contains(sum-s)) {
+				return true;
+			}
+			set.add(sum);
 		}
-		if(found)
-			System.out.println("True");
-		else
-			System.out.println("False");
+		return false;
 	}
-	static void check1(int arr[],int s) {
-		boolean found=false;
+	
+	static boolean check1(int arr[],int s) {
 		for(int i=0;i<arr.length;i++) {
 			int curr=0;
 			for(int j=i;j<arr.length;j++) {
 				curr=curr+arr[j];
 				if(curr==s) {
-					found=true;
+					return true;
 				}
 			}
-			if(found)
-				break;
 		}
-		if(found)
-			System.out.println("True");
-		else
-			System.out.println("False");
+		return false;
 	}
+	
 	public static void main(String[] args) {
 		Scanner sc=new Scanner(System.in);
 		System.out.println("Enter sum");
@@ -46,8 +40,8 @@ public class SubArrayWithGivenSum {
 		int arr[]=new int[n];
 		for(int i=0;i<n;i++)
 			arr[i]=sc.nextInt();
-		check1(arr,s);
-		check2(arr,s);
+		System.out.println(check1(arr,s));
+		System.out.println(check2(arr,s));
 		sc.close();
 	}
 }

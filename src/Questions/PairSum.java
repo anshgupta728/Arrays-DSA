@@ -36,7 +36,7 @@ public class PairSum {
 		for(int i=0;i<n;i++) {
 			int temp=sum-arr[i];
 			if(set.contains(temp)) {
-				System.out.println(arr[i]+" "+temp);
+				System.out.println(temp+" "+arr[i]);
 			}
 			set.add(arr[i]);
 		}
@@ -57,5 +57,4 @@ public class PairSum {
 		findPairs3(arr,n,sum);
 		sc.close();
 	}
-
 }

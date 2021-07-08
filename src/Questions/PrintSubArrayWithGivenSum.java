@@ -3,7 +3,7 @@ import java.util.HashMap;
 import java.util.Scanner;
 public class PrintSubArrayWithGivenSum {
 	static void hash_map(int arr[],int n,int s) {
-		HashMap<Integer,Integer> map=new HashMap<Integer,Integer>();
+		HashMap<Integer,Integer> map=new HashMap<>();
 		int curr=0,start=-1,end=-1;
 		boolean found=false;
 		for(int i=0;i<n;i++) {
